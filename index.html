@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- TODO: ------------------- Required meta tags ------------------>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--TODO:----- Google Fonts(Optional) Roboto -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"> -->
+    <!--TODO:----- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!--TODO:----- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+    <!--TODO:------------- Custom Personalize css  -------------->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!--TODO:-------------- Animation.css links(Please Include anim folder)  -------------->
+    <link rel="stylesheet" href="anim/css/libs/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
+    <title>DEMO: Bankist</title>
+    <!--TODO:------ Adding icon of Max size of (100 X 100) in Tab bar -->
+    <link rel="shortcut icon" href="img/icon.png">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="nav">
+            <div class="col-5 msg">Log in to get started</div>
+            <div class="col-1 logo"><img src="img/logo.png" alt=""></div>
+            <div class="col-6 inps ">
+                <form method="get" action="" class="login">
+                    <input autocomplete="off" type="text" placeholder="user" id="user" class="logInp">
+                    <input autocomplete="off" type="password" placeholder="PIN" id="pin" class="logInp">
+                    <button type="submit" class="submit">&rarr;</button>
+                </form>
+            </div>
+        </nav>
+
+        <div class="row playArea">
+            <div class="col-7" id="current">
+                <h4>Current balance</h4>
+                <span class="date">As of 14/07/2021, 00:51</span>
+                <label class="switch">
+                    <input type="checkbox" id="togBtn">
+                    <div class="slider round">
+                        <!--ADDED HTML -->
+                        <span class="on">₨</span>
+                        <span class="off">€</span>
+                        <!--END-->
+                    </div>
+                </label>
+            </div>
+            <div class="col-5 right">
+                <h2 id="balance">0 Rs</h2>
+            </div>
+
+            <div class="col-md-7">
+                <div class="panel panel-primary" id="transactionPanel">
+
+                    <div class="panel-body">
+                        <ul class="list-group">
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 cards">
+                <div class="row">
+                    <div class="card firstCard">
+                        <div class="card-body">
+                            <h5 class="card-title">Transfer money</h5>
+                            <p class="card-text">
+                            <form method="get" action="" class="">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <input autocomplete="off" type="text" class="sideFormBox" id="transferTo">
+                                        <p>Transfer to</p>
+                                    </div>
+                                    <div class="col-5 left">
+                                        <input autocomplete="off" type="number" class="sideFormBox" id="transferAmount">
+                                        <p>Amount</p>
+                                    </div>
+                                    <div class="col-2 left">
+                                        <button type="submit" class="sideFormSubmit" id="transferBtn">&rarr;</button>
+                                    </div>
+                                </div>
+                            </form>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card secondCard">
+                        <div class="card-body">
+                            <h5 class="card-title">Request loan</h5>
+                            <p class="card-text">
+                            <form method="get" action="" class="">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <input autocomplete="off" type="number" class="sideFormBox" id="loanAmount">
+                                        <p>Amount</p>
+                                    </div>
+
+                                    <div class="col-2 ">
+                                        <button type="submit" class="sideFormSubmit " id="loanBtn">&rarr;</button>
+                                    </div>
+
+
+                                </div>
+                            </form>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card thirdCard">
+                        <div class="card-body">
+                            <h5 class="card-title">Close account</h5>
+                            <p class="card-text">
+                            <form method="get" action="" class="">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <input autocomplete="off" type="text" class="sideFormBox" id="confirmUser">
+                                        <p>Confirm user</p>
+                                    </div>
+                                    <div class="col-5 left">
+                                        <input autocomplete="off" type="password" class="sideFormBox" id="confirmPin">
+                                        <p>Confirm pin</p>
+                                    </div>
+                                    <div class="col-2 left">
+                                        <button type="submit " class="sideFormSubmit" id="confirmBtn">&rarr;</button>
+                                    </div>
+                                </div>
+                            </form>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-7 sumary">
+                <div class="row">
+                    <div class="col-4 Comp"><strong>IN <span class="in">0 <span
+                                    style="text-transform: capitalize;"></span></span></strong></div>
+                    <div class="col-4 Comp"><strong>OUT <span class="out">0 <span
+                                    style="text-transform: capitalize;"></span></span></strong></div>
+                    <div class="col-2 Comp"> <strong class="gayab">INTEREST <span class="interest">0 <span
+                                    style="text-transform: capitalize;"></span></span></strong>
+                    </div>
+                    <div class="col-2">
+                        <button type="submit" class="sortBtn">&darr;&nbsp;SORT</button>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="col-md-5 logOut">
+                <p>You will be logged out in <span class='logOutTime'></span></p>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--TODO:----- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--TODO:----- Bootstrap tooltips -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!--TODO:----- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!--TODO:----- MDB core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    <!--TODO:----- Customize(User) JavaScript -->
+    <script src="js/"></script>
+    <!--TODO:------------ Font awesome icons link  -------------->
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+
+    <!--TODO:---------- Wow.js link and then script for scrolling animation  -------------->
+    <script src="anim/dist/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

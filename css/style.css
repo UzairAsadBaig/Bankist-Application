@@ -1,0 +1,607 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    color: #444;
+    background-color: #f3f3f3;
+}
+
+.msg {
+     font-size: 1.175rem;
+     font-weight: bold;
+     padding-top: 1.9rem;
+     padding-left: 1.55rem;
+}
+
+.logo img{
+  width: 3.3rem; 
+  padding-top:1.5rem ;
+  float: right;
+}
+.logo{
+  padding-right: 0;
+}
+
+.login{
+    padding-top:1.87rem ;
+  text-align: right;
+
+}
+
+input{
+    text-align: center;
+    font-weight: bold;
+}
+
+.logInp{
+    width: 8rem;
+    margin-left: .5rem;
+    height: 2.2rem;
+    border: 1px solid #fff;
+    border-radius: 1.25rem;
+    
+}
+::placeholder{
+    color: #bbb;
+}
+input:focus { 
+    outline: none !important;
+    border: 1px solid #ccc;
+}
+
+.submit{
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  color:#444;
+ margin-left: 0.5rem;
+ background-color: #f3f3f3;
+ /* padding-top: 0.25rem; */
+
+}
+
+.submit:focus{
+    outline: none !important;
+}
+
+#current h4{
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    letter-spacing: 0.06rem;
+}
+#current .date{
+    font-size: .9rem;
+    margin-top: 0.3rem;
+    padding-top: 0;
+    opacity: 65%;
+}
+
+#current{
+    margin-bottom: 2.35rem;
+}
+/* Toggle */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 5.5rem;
+    height: 34px;
+    float: right;
+    top: 2rem;
+  }
+  
+  .switch input {display:none;}
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffb003;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2ab934;
+    /* background-image: linear-gradient(to top left, #ffb003, #ffcb03); */
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(55px);
+    -ms-transform: translateX(55px);
+    transform: translateX(55px);
+  }
+  
+  /*------ ADDED CSS ---------*/
+  .on
+  {
+    display: none;
+    font-size: 1rem;
+  }
+  
+.off{
+    font-size: .9rem;
+}
+
+  .on, .off
+  {
+    color: white;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-family: Verdana, sans-serif;
+  }
+  
+  input:checked+ .slider .on
+  {display: block;}
+  
+  input:checked + .slider .off
+  {display: none;}
+  
+  /*--------- END --------*/
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;}
+
+
+
+
+
+
+
+#balance{
+    font-size: 2.7rem;
+    font-weight: 600;
+    opacity: 90%;
+}
+
+.playArea{
+    padding: 3rem 8rem 2rem 7rem;
+    opacity: 0;
+}
+
+.right{
+    text-align: right;
+    padding-right: 0;
+}
+
+.list-group{
+    height: 31rem;
+    margin-bottom: 10px;
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 0.8rem;
+  
+}
+
+.list-group-item{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 2.6rem;
+}
+
+.transactionNo{
+    border-radius: 0.6rem;
+    font-size: 0.6rem;
+    padding: 0.2rem 0.7rem 0.2rem 0.7rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.07rem;
+}
+.Deposit{
+    background-image: linear-gradient(to top left, #39b385, #9be15d);
+
+}
+.Withdrawal{
+    background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+
+
+.transactionDate{
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding-left: 1rem;
+    letter-spacing: 0.03rem;
+}
+
+.transactionAmount{
+    float: right;
+}
+
+.firstCard{
+    background-image: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+
+.secondCard{
+    background-image: linear-gradient(to top left, #39b385, #9be15d);
+}
+
+.thirdCard{
+    background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+
+.card{
+    margin-bottom: 1rem;
+    height: 9.6rem;
+    border-radius: 0.8rem;
+    width: 28rem;
+}
+
+.card-body{
+    padding-bottom: 0;
+    padding-left: 2.3rem;
+}
+
+.card-body h5{
+    font-size: 1.03rem;
+    font-weight: bold !important;
+    padding-top: 1rem;
+    color: black;
+}
+
+
+.sideFormBox{
+   border-radius: .4rem;
+   height: 1.8rem;
+   border: none;
+   outline: none;
+   width: -moz-fit-content;
+ width: 90%;
+   background-color: rgba(255, 255, 255, 0.4);
+}
+
+.card .card-body .col-5{
+ box-sizing: border-box;
+
+}
+
+.sideFormBox:focus{
+    background-color:rgba(255, 255, 255, .6) ;
+}
+
+
+.card .card-body form .left{
+  
+    left: -2rem;
+    
+}
+.sideFormSubmit{
+    height: 1.8rem;
+    position: relative;
+    left: -2rem ;
+    width: 3rem;
+    border-radius: 0.3rem;
+    border: none;
+    outline: none;
+}
+.sideFormSubmit:focus{
+    outline: none;
+}
+
+.card .card-body form p{
+    padding-top: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.sumary{
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding-top: 1.8rem;
+    letter-spacing: 0.04rem;
+}
+
+.Comp{
+    padding-right: 0;
+}
+
+.Comp span{
+    font-size: 1.35rem;
+    /* font-weight: bold; */
+}
+
+.in{
+   color: #66c873;
+}
+
+.out{
+    color: #f5465d;
+}
+
+.interest{
+   color: #66c873;
+}
+
+.col-2 .sortBtn{
+    outline: none;
+    border: none;
+    background-color: #f3f3f3;
+    font-size: 0.9rem;
+    padding-top: 0.3rem;
+    float: right;
+}
+
+.logOut{
+    padding-top: 1.8rem;
+    text-align: right;
+}
+
+
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"MEDIA QUERIES"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+/* >>>>>>>>>>>>>>>>>>>>Large Devices */
+@media(min-width:1200px){
+    
+}
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>Medium Devices */
+@media(min-width:992px) and (max-width:1199px){
+
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>>Small Devices */
+@media(min-width:768px) and (max-width:900px) {
+
+    .card .card-body form p{
+        padding-top: 0.5rem;
+        font-size: 0.6rem;
+        font-weight: 700;
+        text-align: center;
+    }
+    .playArea{
+        padding: 3rem;
+    }
+    .list-group,.cards{
+        margin-top: 2rem;
+    }
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>>Extra Small Devices */
+@media(min-width:576px) and (max-width:767px){
+    .msg {
+        font-size: 1.2rem;
+   }
+
+   .logo img{
+    width: 2rem; 
+  }
+
+  
+.logInp{
+    width: 5.5rem;
+    
+}
+
+#current h4{
+    font-size: 1.1rem;
+}
+#current .date{
+    font-size: .7rem;
+}
+#balance{
+    font-size: 1.6rem;
+}
+.list-group{
+    margin-bottom: 5rem;
+    margin-top: 1rem;
+}
+.playArea{
+    padding: 3rem 3rem 3rem 3rem;
+}
+.cards{
+    padding-left: 15%;
+}
+.sumary .col-2 strong{
+  font-size: 0.65rem;
+}
+.interest{
+    font-size: 0.6rem;
+}
+
+.sumary{
+    font-size: 0.8rem;
+}
+.Comp span{
+    font-size: 1.1rem;
+}
+
+.logOut{
+    font-size: 0.9rem;
+}
+
+}
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>Extra-Extra Small Devices */
+@media(max-width:575px) {
+    .msg {
+        font-size: 0.7rem;
+        padding-left: 0;
+        position: absolute;
+        left: 1.9rem;
+        top: 2.9rem;
+  }
+
+.logo{
+    position: absolute;
+    left: 2rem;
+    top: .7rem;
+}
+
+   .logo img{
+    width: 2rem;
+  }
+.inps{
+    padding-right: 0;
+    margin-left: 40%;
+    /* position: absolute; */
+    /* right: 1rem; */
+}
+   .container-fluid{
+padding-right: 0;
+padding-left: 0.2;
+   }
+  
+.logInp{
+    font-size: 0.7rem;
+    width: 6rem;
+    height: 1.1rem ;
+    margin-top: 0.25rem;
+    margin-left: 0.15rem;
+    border-radius: 0.8rem;
+    
+}
+.logInp::after{
+    content: "\a";
+    white-space: pre;
+    
+}
+.submit{
+   font-size: 0.9rem;
+   display: block;
+   /* padding-top: 0.4rem; */
+   margin-left: 55%;
+  }
+
+#current h4{
+    font-size: 0.8rem;
+}
+#current .date{
+    font-size: .6rem;
+    position: absolute;
+    left: 1rem;
+}
+#balance{
+    font-size: 1rem;
+}
+.switch{
+    margin-top: 1.5rem;
+    margin-bottom:.5rem;
+    float: left;
+    height: 1.5rem;
+    width:3rem;
+}
+.slider:before {
+    height: .9rem;
+    width: .9rem;
+    left: 4px;
+    bottom: 4px;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(1.7rem);
+    -ms-transform: translateX(1.7rem);
+    transform: translateX(1.7rem);
+  }
+
+  .on , .off{
+   font-size: 0.6rem;
+  }
+.list-group{
+    margin-bottom: 5rem;
+    margin-top: 1rem;
+}
+
+.list-group-item{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.transactionNo{
+    font-size: 0.4rem;
+
+}
+
+.transactionDate{
+    font-size: 0.4rem;
+    padding-left: 0.2rem;
+}
+
+.transactionAmount{
+   font-size: 0.8rem;
+}
+
+
+.playArea{
+    padding: 2.5rem 2.1rem 1rem 1rem;
+
+}
+.cards{
+    padding-left: 15%;
+}
+
+.card-body h5{
+    font-size: 0.9rem;
+}
+.card .card-body form p{
+    font-size: 0.7rem;
+}
+
+.sideFormSubmit{
+    font-size: 0.9rem;
+}
+
+.sumary .col-2 strong{
+  font-size: 0.65rem;
+}
+.gayab{
+ opacity: 0;
+}
+
+.sumary{
+    font-size: 0.7rem;
+}
+.Comp span{
+    font-size: 0.9rem;
+}
+
+.logOut{
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.col-2 .sortBtn{
+    font-size: 0.8rem ;
+    padding-top: 0;
+}
+
+}
